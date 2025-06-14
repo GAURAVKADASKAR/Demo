@@ -316,3 +316,44 @@ p.message {
   transform: scale(1.1);
   box-shadow: 0 8px 20px rgba(255, 105, 135, 0.4);
 }
+.counter-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.time {
+  background: #fff0f8;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+  color: #d6006b;
+  min-width: 100px;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.time:hover {
+  transform: scale(1.08);
+}
+
+.label {
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #8b005d;
+  margin-top: 8px;
+}
+.time {
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0px rgba(255, 105, 180, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(255, 105, 180, 0.7); }
+  100% { box-shadow: 0 0 0px rgba(255, 105, 180, 0.5); }
+}

@@ -8,36 +8,48 @@
 </head>
 <body>
   <header>
-    <!-- <h2>Sakshi & Me 💘</h2> -->
+    <h2> 💓 Mine 💓</h2>
     <nav>
       <a href="index.html">Home</a>
-      <a href="quotes.html">Love Quotes</a>
+      <a href="quotes.html">Gallery</a>
       <a href="message.html">Sweet Message</a>
+      <a href="time.html">Love Clock</a>
     </nav>
   </header>
 
   <section>
-    <h1>Our Romantic Moments</h1>
+    <h1>💓💓Moments💓💓</h1>
     <div class="gallery">
 
       <div class="gallery-item fade">
-        <img src="images/download_image.jpg" alt="Couple 1">
+        <img src="images/sakshi_photo.jpeg" alt="Couple 1">
         <div class="caption">❤️ Your smile, my peace.</div>
       </div>
 
       <div class="gallery-item fade">
-        <img src="images/download_image.jpg" alt="Couple 2">
-        <div class="caption">❤️ A hug from you is</div>
+        <img src="images/Sashi2.jpeg" alt="Couple 2">
+        <div class="caption">❤️ Love you cutie</div>
       </div>
 
       <div class="gallery-item fade">
-        <img src="images/WhatsApp Image 2025-06-14 at 12.43.34 PM.jpeg" alt="Couple 3">
-        <div class="caption">❤️ Together is our favorite place.</div>
-      </div>
-
-      <div class="gallery-item fade">
-        <img src="images/download_image.jpg" alt="Couple 4">
+        <img src="images/sakshi4.jpeg" alt="Couple 4">
         <div class="caption">❤️ You make my heart bloom.</div>
+      </div>
+
+      <div class="gallery-item fade">
+        <img src="images/we.jpeg" alt="Couple 4">
+        <div class="caption">❤️ Together is our favorite place.</div>
+      </div>/
+
+      <div class="gallery-item fade">
+        <img src="images/we2.jpeg" alt="Couple 4">
+        <div class="caption">❤️ Together we look good</div>
+      </div>
+
+      <div class="gallery-item fade">
+        <img src="images/sakshi6.jpeg" alt="Couple 3">
+        <div class="caption">❤️ Kitni sahi hein.</div>
+        
       </div>
 
     </div>
@@ -49,5 +61,10 @@
     <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
   </audio>
   <script src="script.js"></script>
+  <script>
+    if (localStorage.getItem("name") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
 </body>
 </html>
