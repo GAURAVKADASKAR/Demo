@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Quotes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <!-- <h2>Sakshi & Me 💘</h2> -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="message.html">Sweet Message</a>
+    </nav>
+  </header>
+
+  <section class="quotes-section">
+    <h1>Whispers of My Heart</h1>
+    <div class="quote-box">
+      <p id="quoteText" class="quote-text">Loading...</p>
+    </div>
+  </section>
+
+  <div class="hearts" id="hearts"></div>
+
+  <button id="musicButton">Play Music 🎵</button>
+  <audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+  <script>
+    const quotes = [
+      "You’re the reason I believe in magic again.",
+      "In your arms, I found my forever home.",
+      "Every heartbeat of mine echoes your name.",
+      "You are the poetry my soul was always searching for.",
+      "Loving you is the easiest thing I’ve ever done.",
+      "The stars in your eyes outshine the whole universe.",
+      "You made my life a fairytale just by being in it.",
+      "Each moment with you is a page in our love story."
+    ];
+
+    let index = 0;
+    const quoteText = document.getElementById("quoteText");
+
+    function showQuote() {
+      quoteText.classList.remove("fade-in");
+      void quoteText.offsetWidth; // trigger reflow for re-animation
+      quoteText.innerText = quotes[index];
+      quoteText.classList.add("fade-in");
+      index = (index + 1) % quotes.length;
+    }
+
+    showQuote();
+    setInterval(showQuote, 4000); // change every 4 seconds
+  </script>
+</body>
+</html>

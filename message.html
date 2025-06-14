@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Message</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="quotes.html">Love Quotes</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Sweet Message</h1>
+    <div class="message-container">
+      <div class="message-slide active">
+        <div class="scroll-message">
+          <div class="message-text">
+            Dear Sakshi,<br><br>
+            You have filled my life with colors brighter than rainbows. Each memory with you is a treasure, and your laughter is my favorite melody.<br>
+            I never believed in soulmates until I met you. You're the calm to my storm, the smile to my face, and the queen of my world.<br><br>
+            Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script Dancing Script<br><br>
+            <strong>Forever yours, with every beat of my heart.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-slide">
+        <div class="scroll-message">
+          <div class="message-text">
+            My Dearest,<br><br>
+            Every time I think about you, my heart feels warm. Your smile is the sunrise that starts my day, and your hug is the night that keeps me safe.<br>
+            I wish I could pause time when we are together — those moments are the most peaceful and beautiful seconds of my life.<br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla. Ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.<br><br>
+            <strong>I love you more than words can ever express.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-slide">
+        <div class="scroll-message">
+          <div class="message-text">
+            To My Love,<br><br>
+            Every heartbeat, every breath I take reminds me of you. You're not just in my heart, you are my heart. You're not just in my dreams, you are my dream come true.<br>
+            I remember every little moment spent with you — each one stitched in my soul like constellations in a night sky.<br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed id semper risus. Viverra adipiscing at in tellus integer feugiat scelerisque. Duis ut diam quam nulla porttitor massa id. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi.<br><br>
+            <strong>Yours in every universe.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="prevMessage()">Back</button>
+      <button onclick="nextMessage()">Next</button>
+    </div>
+  </section>
+
+  <button id="musicButton">Play Music 🎵</button>
+  <audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    document.getElementById("musicButton").addEventListener("click", function () {
+      const audio = document.getElementById("bgMusic");
+      if (audio.paused) {
+        audio.play();
+        this.textContent = "Pause Music ❚❚";
+      } else {
+        audio.pause();
+        this.textContent = "Play Music 🎵";
+      }
+    });
+
+    // Navigation between message slides
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.message-slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function prevMessage() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function nextMessage() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+  </script>
+</body>
+</html>
